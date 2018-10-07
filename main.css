@@ -1,0 +1,323 @@
+/*
+===================
+HOMEPAGE
+===================
+*/
+
+body {
+    margin: 0;
+}
+
+.background-img {
+    position: relative;
+
+}
+
+.title-hp, .subtitle-hp {
+    position: absolute;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    left: 0;
+    right: 0;
+    color: #313131;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-hp {
+    top: 208px;
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.subtitle-hp {
+    top: 286px;
+    font-size: 47px;
+    font-weight:800;
+    letter-spacing: 0.1;
+}
+
+.btn-hp, .add-to-cart {
+    background-color: #131313;
+    border: 0px;
+    color: white;
+    height: 65px;
+    width: 336px;
+    font-family: "Josefin Sans", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+    position: absolute;
+    letter-spacing: 0.1;
+    padding-top: 8px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.36);
+}
+
+#btn-hp-cats {
+    top: 420px;
+}
+
+#btn-hp-dogs {
+    top: 500px;
+}
+
+#btn-hp-all {
+    top: 610px;
+}
+
+
+/*
+===================
+PRODUCT GALLERY
+===================
+*/
+
+
+.gallery {
+    float: right;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    float: left;
+    width: 15%;
+    margin-left: 25px;
+}
+
+.sidebar-tag, .sidebar-tag-bold {
+    font-family: "Josefin Sans", "Helvetica", sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    letter-spacing: 0.12;
+    height: 48px;
+    color: #454545;
+}
+
+.sidebar-tag-bold {
+    font-weight: 600;
+    color: #131313;
+}
+
+/* TOP NAVIGATION BAR */
+.navbar-top {
+    box-shadow: 0 2px 20px rgba(230, 230, 230, 0.5);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#ic-logo {
+    margin-left: 4%;
+}
+
+#search-bar {
+    height: 44px;
+    width: 25%;
+    margin-left: 52%;
+    margin-right: auto;
+    background-color: #FCFCFC;
+    box-shadow: inset 0 0 7px rgba(220, 220, 220, 0.44);
+    border: 0;
+}
+
+::placeholder {
+    font-family: "Noto Serif JP";
+    padding-left: 12px;
+    font-size: 14px;
+}
+
+::-ms-input-placeholder {
+    font-family: "Noto Serif JP";
+    padding-left: 12px;
+    font-size: 14px;
+}
+
+#ic-cart {
+    margin-left: auto;
+    margin-right: 4%;
+}
+
+.page-title, .product-column, .about-text, .info-contact {
+    padding-left: 20px;
+}
+
+.page-title {
+    font-family: "Josefin Sans", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    color: #131313;
+    font-size: 44px;
+}
+
+/* GALLERY */
+
+.container {
+    margin-top: 84px;
+}
+
+.gallery {
+    margin-left: 5%;
+}
+
+.product-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-column {
+    float: left;
+    width: 30%;
+}
+
+.product-info, .product-price, .body-text, .body-text-gray {
+    font-family: "Noto Serif JP", sans-serif;
+    color: #131313;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/*
+====================
+ABOUT
+====================
+*/
+
+.about-text {
+    width: 380px;
+}
+
+.body-text {
+    text-align: justify;
+}
+
+.about-img {
+    display: inline-block;
+    float: right;
+}
+
+/*
+====================
+CONTACT
+====================
+*/
+
+.info-contact {
+    float: left;
+}
+
+.info-hours {
+    min-width: 300px;
+    max-width: 340px;
+    display: flex;
+    align-items: baseline;
+    height: 20px;
+}
+
+h2.subtitle {
+    font-family: "Josefin Sans", "Helvetica", sans-serif;
+    color: #131313;
+    font-size: 22px;
+}
+
+span.body-text-gray {
+    display: inline;
+    color: #666666;
+    margin-left: auto;
+}
+
+.info-map {
+    float: left;
+    width: 45%;
+    padding-left: 20px;
+    padding-right: 5%;
+}
+
+#img-map {
+    min-width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+====================
+PRODUCT DETAILS
+====================
+*/
+
+.nav-link {
+    font-weight: 100;
+    font-family: "Josefin Sans", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.product-detail-img {
+    width: 520px;
+    height: 400px;
+    margin-left: 5%;
+    overflow: hidden;
+    float: left;
+}
+
+#detail-img-yellowCB {
+    max-width: 100%;
+    min-width: 260px;
+}
+
+.product-detail {
+    padding-left: 20px;
+    float: left;
+    clear: right;
+    max-width: 45%;
+    min-width: 440px;
+}
+
+.product-detail-title, .product-detail-price {
+    font-family: "Josefin Sans", "Helvetica", sans-serif;
+    color: #131313;
+}
+
+.product-detail-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.product-detail-price {
+    font-weight: 100;
+    font-size: 32px;
+}
+
+button#product-color, button#product-size {
+    width: 140px;
+    height: 45px;
+    border: 3px solid #131313;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+button#product-size {
+    margin-left: 30px;
+}
+
+.wrapper {
+    overflow: hidden;
+    border-bottom: 1px solid #131313;
+    padding-bottom: 30px;
+}
+
+#add-to-cart {
+}
