@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,11 +10,11 @@
     </head>
     <body>
         <div class="navbar-top">
-            <img id="ic-logo" src="PUI-HW5-sources/icons/ic_logo.svg" alt="muddy paw logo" width=40px/>
+            <a href="PUI_HW5_Homepage.html"><img id="ic-logo" src="PUI-HW5-sources/icons/ic_logo.svg" alt="muddy paw logo" width=40px/></a>
             <input id="search-bar" type="text" name="search" placeholder="Search"/>
             <img id="ic-cart" src="PUI-HW5-sources/icons/ic_cart.svg" alt="shopping cart icon" width=24px />
         </div>
-        <p class="nav-link">back</p>
+        <p class="nav-link-dark"><a href="PUI_HW5_02_Products.html" style="text-decoration: none">back</a></p>
         <div class="wrapper">
             <div class="product-detail-img">
                 <img id="detail-img-yellowCB" src="PUI-HW5-sources/CB-1.jpg"/>
@@ -25,9 +26,25 @@
                 <p class="body-text">
                 Bring your meow friend to the mountain in this bright and light backpack! Waterproof material makes it perfect for all weather, and the holes on every face ensures that there’s always enough fresh air.
                 </p>
-                <button id="product-color">Color</button>
-                <button id="product-size">Size</button>
-                <button class="add-to-cart">Add to Cart</button>
+                <div class="dropdown">
+                    <button id="product-color">Color</button>
+                    <div class="dropdown-content">
+                        <p>Blackberry</p>
+                        <p>Crazy Berry</p>
+                        <p>Fire Orange</p>
+                        <p>Strawberry</p>
+                    </div>
+                </div>
+                <div class="dropdown-right">
+                    <button id="product-size">Size</button>
+                    <div class="dropdown-content">
+                        <p>Tiny</p>
+                        <p>Small</p>
+                        <p>Medium</p>
+                        <p>Large</p>
+                    </div>
+                </div>
+                <button id="add-to-cart">Add to Cart</button>
             </div>
         </div>
     </body>    
