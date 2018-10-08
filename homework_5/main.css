@@ -8,9 +8,14 @@ body {
     margin: 0;
 }
 
+a.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+
 .background-img {
     position: relative;
-
 }
 
 .title-hp, .subtitle-hp {
@@ -38,7 +43,7 @@ body {
     letter-spacing: 0.1;
 }
 
-.btn-hp, .add-to-cart {
+.btn-hp, #add-to-cart {
     background-color: #131313;
     border: 0px;
     color: white;
@@ -79,10 +84,10 @@ PRODUCT GALLERY
 
 
 .gallery {
-    float: right;
-    width: 75%;
+    margin-right: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
 }
 
 /* SIDEBAR */
@@ -93,9 +98,13 @@ PRODUCT GALLERY
     margin-left: 25px;
 }
 
+.nav-link-side {
+    text-decoration: none;
+}
+
 .sidebar-tag, .sidebar-tag-bold {
     font-family: "Josefin Sans", "Helvetica", sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 24px;
     letter-spacing: 0.12;
     height: 48px;
@@ -107,6 +116,12 @@ PRODUCT GALLERY
     color: #131313;
 }
 
+ul { 
+    list-style-type: none !important;
+    padding: 0;
+    margin-top: 84px;
+}
+
 /* TOP NAVIGATION BAR */
 .navbar-top {
     box-shadow: 0 2px 20px rgba(230, 230, 230, 0.5);
@@ -114,9 +129,10 @@ PRODUCT GALLERY
     display: flex;
     align-items: center;
     width: 100%;
+    padding-left: 4%;
 }
 
-#ic-logo {
+a#ic-logo {
     margin-left: 4%;
 }
 
@@ -147,7 +163,7 @@ PRODUCT GALLERY
     margin-right: 4%;
 }
 
-.page-title, .product-column, .about-text, .info-contact {
+.page-title, .about-text, .info-contact {
     padding-left: 20px;
 }
 
@@ -173,11 +189,6 @@ PRODUCT GALLERY
     height: auto;
 }
 
-.product-column {
-    float: left;
-    width: 30%;
-}
-
 .product-info, .product-price, .body-text, .body-text-gray {
     font-family: "Noto Serif JP", sans-serif;
     color: #131313;
@@ -193,6 +204,11 @@ ABOUT
 ====================
 */
 
+.main-content {
+    float: left;
+    width: 80%;
+}
+
 .about-text {
     width: 380px;
 }
@@ -202,8 +218,14 @@ ABOUT
 }
 
 .about-img {
-    display: inline-block;
+    display: inline;
     float: right;
+}
+
+.container-generic {
+    width: 75%;
+    float: right; 
+    margin-top: 84px;
 }
 
 /*
@@ -244,8 +266,7 @@ span.body-text-gray {
 }
 
 #img-map {
-    min-width: 250px;
-    max-width: 100%;
+    width: 350px;
     height: auto;
 }
 
@@ -255,11 +276,12 @@ PRODUCT DETAILS
 ====================
 */
 
-.nav-link {
-    font-weight: 100;
+p.nav-link-dark {
+    font-weight: 400;
     font-family: "Josefin Sans", "Helvetica", sans-serif;
     text-transform: uppercase;
     font-size: 28px;
+    margin-left: 5%;
 }
 
 .product-detail-img {
@@ -295,7 +317,7 @@ PRODUCT DETAILS
 }
 
 .product-detail-price {
-    font-weight: 100;
+    font-weight: 400;
     font-size: 32px;
 }
 
@@ -303,21 +325,63 @@ button#product-color, button#product-size {
     width: 140px;
     height: 45px;
     border: 3px solid #131313;
+    background-color: white;
     font-family: "Noto Serif JP", serif;
     font-weight: 700;
     font-size: 14px;
     margin-top: 20px;
 }
 
-button#product-size {
-    margin-left: 30px;
-}
-
 .wrapper {
     overflow: hidden;
     border-bottom: 1px solid #131313;
-    padding-bottom: 30px;
+    padding-bottom: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
-#add-to-cart {
+button#add-to-cart {
+    position: relative;
+    top: 170px;
+    left: 100px;
+}
+
+
+.dropdown, .dropdown-right {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-right {
+    left: 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 140px;
+    box-shadow: 0 12px 20px rgba(238, 238, 238, 0.5);
+    z-index: 1;
+}
+
+.dropdown-content p {
+    text-align: center;
+    display: block;
+}
+
+.dropdown-content p:hover {
+    background-color: #62BFFF;
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+
+.dropdown-right:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-selection {
+	line-height: 1.5em;
 }
