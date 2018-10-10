@@ -19,7 +19,7 @@ function Peacock(name, age) {
     this.image = "peacock.jpg";
 }
 
-var animal = [new PolarBear("Lucy", 25), new Panda("PaoPao", 25), new Peacock("Judy", 24)];
+var animal = [new PolarBear(), new Panda(), new Peacock()];
 
 var names = ["Lucy", "PaoPao", "Judy", "George", "Gary", "Kiri", "Gigi"];
 
