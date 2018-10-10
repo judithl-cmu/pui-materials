@@ -21,7 +21,7 @@ function Peacock(name, age) {
 
 var animal = [new PolarBear("Lucy", 25), new Panda("PaoPao", 25), new Peacock("Judy", 24)];
 
-var name = ["Lucy", "PaoPao", "Judy", "George", "Gary", "Kiri", "randomName"];
+var names = ["Lucy", "PaoPao", "Judy", "George", "Gary", "Kiri", "Gigi"];
 
 
 // Writing functions
@@ -32,21 +32,12 @@ function generateRandomIndex(maxIndex) {
 }
 
 function generateRandomName() {
-    
-    //     call the generateRandomIndex(maxIndex) function we wrote above
-    var randomNameIndex = generateRandomIndex(name.length);
-    console.log(name.length);
-    console.log("index value: " + randomNameIndex);
-    // save the random value it returns in a variable (i.e. randomIndex)
-    // use the variable to access the necessary index in the array you created above
-    console.log("index 0: " + name[0]);
-    return name[randomNameIndex];
-
-    //var randomName = //animal[generateRandomIndex(animal.length)].name;
+    var randomName = names[generateRandomIndex(names.length)];
+    return randomName;
 }
-/*
-function generateRandomAge(maxIndex) {
-    var randomAge = animal[generateRandomIndex(animal.length)].age;
+
+function generateRandomAge() {
+    var randomAge = animal[generateRandomIndex(animal.length)]["age"];
     return randomAge;
 }
 
@@ -62,6 +53,11 @@ function generateRandomAnimal() {
         return new Peacock(generateRandomName(), generateRandomAge());
     }
 }
-*/
+
 // Identify the animal
 
+$(document).ready(function() {
+    var animal = generateRandomAnimal();
+    $("#animal-description").text(animal.name + " is a " + animal.type + " and it's " + animal.age + " years old.")
+    $("#animal-img").attr("src", animal.image);
+});
