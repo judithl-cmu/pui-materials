@@ -73,7 +73,7 @@ $(document).ready(function() {
     $("#animal-img").attr("src", animal.image);
 
     //select animal
-function saveAnimalLocally() {
+    function saveAnimalLocally() {
         localStorage.setItem("savedAnimal", JSON.stringify(animal));
     }
 
@@ -93,6 +93,9 @@ function saveAnimalLocally() {
 
             // if button was clicked, hide button and show message to user
         }
+    });
+    // click to add to cart
+    $("#add-to-cart").on ("click", function() {
 
     });
 });

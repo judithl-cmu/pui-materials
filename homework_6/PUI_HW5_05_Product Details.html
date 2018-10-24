@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MUDDY PAWS PRODUCT GALLERY</title>
+        <meta name="description" content="A bunch of product images">
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Noto+Serif+JP|Oswald" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="hw6.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="navbar-top">
+            <a href="PUI_HW5_Homepage.html"><img id="ic-logo" src="PUI-HW6-sources/icons/ic_logo.svg" alt="muddy paw logo" width=40px/></a>
+            <input id="search-bar" type="text" name="search" placeholder="Search"/>
+            <img id="ic-cart" src="PUI-HW5-sources/icons/ic_cart.svg" alt="shopping cart icon" width=24px />
+            <div class="ic-count">
+                <p class="cart-count-text">0</p>
+            </div>
+        </div>
+        <p class="nav-link-dark"><a href="PUI_HW5_02_Products.html" style="text-decoration: none; color: #131313">back</a></p>
+        <div class="wrapper">
+            <div class="product-detail-img">
+                <img id="detail-img-yellowCB" src="PUI-HW6-sources/CB-1.jpg"/>
+            </div>
+            <br>
+            <div class="product-detail">
+                <h1 class="product-detail-title" id="test-title">Cat Backpack</h1>
+                <p class="product-detail-price">$35.99</p>
+                <p class="body-text">
+                Bring your meow friend to the mountain in this bright and light backpack! Waterproof material makes it perfect for all weather, and the holes on every face ensures that there’s always enough fresh air.
+                </p>
+                <div class="dropdown">
+                    <button id="product-color">Color</button>
+                    <div class="dropdown-content">
+                        <p id="color-blackberry">Blackberry</p>
+                        <p id="color-crazy-berry">Crazy Berry</p>
+                        <p id="color-fire-orange">Fire Orange</p>
+                        <p id="color-strawberry">Strawberry</p>
+                    </div>
+                </div>
+                <div class="dropdown-right">
+                    <button id="product-size">Size</button>
+                    <div class="dropdown-content-right">
+                        <p id="size-tiny">Tiny</p>
+                        <p id="size-small">Small</p>
+                        <p id="size-medium">Medium</p>
+                        <p id="size-large">Large</p>
+                    </div>
+                </div>
+
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </body>    
+</html>

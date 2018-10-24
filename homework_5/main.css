@@ -386,3 +386,38 @@ button#add-to-cart {
 .dropdown-selection {
 	line-height: 1.5em;
 }
+
+/*
+====================
+SHOPPING CART
+====================
+*/
+
+.cart-img-thumbnail {
+    width: 18%;
+}
+
+.cart-img-details {
+    width: 23.1%;
+    
+}
+
+.product-link {
+    font-family: "Josefin Sans", "Helvetica", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #131313;
+    text-decoration: none;
+}
+
+.cart-price {
+    width: 21.28%;
+}
+
+.cart-quantity {
+    width: 26.17%;
+}
+
+.cart-price-narrow {
+    width: 11.45%;
+}

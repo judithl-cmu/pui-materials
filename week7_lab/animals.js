@@ -19,7 +19,7 @@ function Peacock(name, age) {
     this.image = "peacock.jpg";
 }
 
-var animal = [new PolarBear(), new Panda(), new Peacock()];
+var animals = [new PolarBear(), new Panda(), new Peacock()];
 
 var names = ["Lucy", "PaoPao", "Judy", "George", "Gary", "Kiri", "Gigi"];
 
@@ -37,12 +37,15 @@ function generateRandomName() {
 }
 
 function generateRandomAge() {
-    var randomAge = animal[generateRandomIndex(animal.length)]["age"];
-    return randomAge;
+    //var randomAge = 5/*[generateRandomIndex(5)]*/;
+    console.log("???");
+    //var randomIdx = generateRandomIndex(5);
+    //return randomIdx;
+    //return randomAge;
 }
 
 function generateRandomAnimal() {
-    var randomAnimal = animal[generateRandomIndex(animal.length)];
+    var randomAnimal = animals[generateRandomIndex(animals.length)];
     if (randomAnimal instanceof PolarBear) {
         return new PolarBear(generateRandomName(), generateRandomAge());
     }
@@ -60,4 +63,15 @@ $(document).ready(function() {
     var animal = generateRandomAnimal();
     $("#animal-description").text(animal.name + " is a " + animal.type + " and it's " + animal.age + " years old.")
     $("#animal-img").attr("src", animal.image);
+
+    //select animal
+/*    function saveAnimalLocally() {
+        localStorage.setItem("savedAnimal", JSON.stringify(animal));
+        console.log("animal saved!");
+    }
+*/
+    $("#save").on("click", function() {
+        //saveAnimalLocally();
+        console.log("hi");
+    });
 });
