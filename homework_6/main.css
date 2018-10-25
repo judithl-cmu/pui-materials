@@ -393,6 +393,10 @@ SHOPPING CART
 ====================
 */
 
+#page-title-cart {
+    margin-left: 3%;
+}
+
 /* elements */
 
 .cart-img-thumbnail {
@@ -407,8 +411,7 @@ SHOPPING CART
 }
 
 .cart-img-details {
-    width: 23.1%;
-    
+    width: 25%;
 }
 
 .product-link, span.price, span.price-narrow {
@@ -417,6 +420,7 @@ SHOPPING CART
     font-weight: 600;
     color: #131313;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 span.label, span.value {
@@ -424,18 +428,37 @@ span.label, span.value {
     font-size: 18px;
     font-weight: 300;
     color: #131313;
+    display: block;
+    text-transform: uppercase;
 }
 
 .cart-price {
-    width: 21.28%;
+    width: 20%;
+    padding-left: 14px;
 }
 
+/* manipulate quantity */
+
 .cart-quantity {
-    width: 26.17%;
+    width: 3%;
+    font-size: 22px;
+    color: #131313;
+    font-family: 'Josefin Sans', 'Helvetica', sans-serif;
+}
+
+.cart-remove {
+    width: 10%;
+}
+
+.btn-remove {
+    border: 2px solid #131313;
+    color: #131313;
+    font-family: 'Noto Serif JP';
+    font-size: 11px;
 }
 
 .cart-price-narrow {
-    width: 11.45%;
+    width: 14%;
 }
 
 /* table parent */
@@ -511,3 +534,59 @@ ADD-TO-CART
     color: white;
     font-weight: 500;
 }
+
+/* quantity selector*/
+
+.quantity-selector-container {
+    float: left;
+    width: 260px;
+}
+
+.quantity-selector-container, .quantity-btn, .qty-left-btn {
+    height: 65px;
+    float: left;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-top: 20px;
+    font-size: 24px;
+    display: inline-block;
+    border: 0;
+}
+
+.qty-left-btn, .qty-right-btn {
+    width: 50px;
+}
+
+.qty-right-btn {
+    height: 65px;
+    float: right;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-top: 20px;
+    font-size: 24px;
+    display: inline-block;
+    border: 0;
+}
+
+.qty-content {
+    width: 40px;
+    height: 59px;
+    line-height: 61px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+    display: inline-block;
+    border-top: 3px solid #131313;
+    border-bottom: 3px solid #131313;
+    font-family: 'Josefin Sans', 'Helvetica', sans-serif;
+    text-align: right;
+}
+
+
+.qty-left-btn, .qty-right-btn {
+    background-color: #131313;
+    color: white;
+    text-align: center;
+}
+
+
