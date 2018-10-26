@@ -48,16 +48,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4787" />
-          <entry key="html" value="2184" />
-          <entry key="js" value="13482" />
+          <entry key="css" value="6026" />
+          <entry key="html" value="3616" />
+          <entry key="js" value="14247" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4787" />
-          <entry key="HTML" value="2186" />
-          <entry key="JavaScript" value="13480" />
+          <entry key="CSS" value="6026" />
+          <entry key="HTML" value="3618" />
+          <entry key="JavaScript" value="14245" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -66,20 +66,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PUI_HW5_05_Product Details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+            <state relative-caret-position="269">
+              <caret line="98" column="50" lean-forward="true" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+              <folding>
+                <element signature="n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="418" column="14" selection-start-line="418" selection-start-column="14" selection-end-line="418" selection-end-column="14" />
+            <state relative-caret-position="192">
+              <caret line="119" column="1" lean-forward="true" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -87,11 +90,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw6.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+            <state relative-caret-position="167">
+              <caret line="163" column="44" selection-start-line="163" selection-start-column="44" selection-end-line="163" selection-end-column="44" />
               <folding>
                 <element signature="e#2361#2476#0" />
-                <element signature="e#2492#3147#0" />
               </folding>
             </state>
           </provider>
@@ -100,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/load-cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="39" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="39" />
+            <state relative-caret-position="299">
+              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -109,8 +111,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PUI_HW6_Cart page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="36" />
+            <state relative-caret-position="-1251">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="45" />
+              <folding>
+                <element signature="n#td#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#td#2;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,34 +132,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>grid</find>
-      <find>value</find>
-      <find>nav</find>
-      <find>savedAnimal</find>
-      <find>dropdown-content</find>
-      <find>product-detail-</find>
-      <find>btn</find>
-      <find>label</find>
-      <find>product-link</find>
-      <find>price</find>
-      <find>noto</find>
-      <find>cart-quantity</find>
-      <find>table</find>
-      <find>cart</find>
-      <find>qty</find>
-      <find>quantity</find>
-      <find>Qty</find>
-      <find>remove</find>
-      <find>cart-count-text</find>
-      <find>ic-</find>
-      <find>subtotal</find>
       <find>box-sha</find>
+      <find>innter</find>
+      <find>ic-count</find>
+      <find>btn-ok</find>
+      <find>cat backpack</find>
+      <find>ic-cart</find>
+      <find>popup</find>
+      <find>ic-</find>
+      <find>3</find>
+      <find>img-thum</find>
+      <find>subtotal-wrapper</find>
+      <find>subtotal</find>
+      <find>btn-che</find>
+      <find>page-title-cart</find>
+      <find>page-title</find>
+      <find>cart</find>
+      <find>page-title-</find>
+      <find>page-nav</find>
+      <find>grid</find>
+      <find>#add-to-cart</find>
+      <find>add-to-cart</find>
+      <find>qty-cart</find>
+      <find>quantity</find>
+      <find>qty-</find>
+      <find>ic-cart-wrapper-right</find>
       <find>parse</find>
       <find>test code</find>
-      <find>btn-ok</find>
-      <find>innter</find>
-      <find>popup</find>
-      <find>ic-count</find>
+      <find>wrapper</find>
+      <find>cat bac</find>
+      <find>product gall</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,8 +178,8 @@
         <option value="$PROJECT_DIR$/PUI_HW6_Cart page.html" />
         <option value="$PROJECT_DIR$/load-cart.js" />
         <option value="$PROJECT_DIR$/hw6.js" />
-        <option value="$PROJECT_DIR$/PUI_HW5_05_Product Details.html" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/PUI_HW5_05_Product Details.html" />
       </list>
     </option>
   </component>
@@ -182,9 +190,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="678" />
+    <option name="x" value="613" />
     <option name="y" value="23" />
-    <option name="width" value="853" />
+    <option name="width" value="1132" />
     <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -195,6 +203,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="{&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
@@ -230,15 +239,15 @@
       <workItem from="1539662275457" duration="4735000" />
       <workItem from="1539667488611" duration="12664000" />
       <workItem from="1539894295650" duration="44569000" />
-      <workItem from="1540473476635" duration="15299000" />
+      <workItem from="1540473476635" duration="33205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87317000" />
+    <option name="totallyTimeSpent" value="105223000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="678" y="23" width="853" height="840" extended-state="0" />
+    <frame x="613" y="23" width="1132" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.1660693" />
@@ -332,40 +341,46 @@
     <entry file="file://$PROJECT_DIR$/snippet-test.js" />
     <entry file="file://$PROJECT_DIR$/PUI_HW6_Cart page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="36" />
+        <state relative-caret-position="-1251">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="n#td#0;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#td#2;n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/load-cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="39" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="39" />
+        <state relative-caret-position="299">
+          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw6.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+        <state relative-caret-position="167">
+          <caret line="163" column="44" selection-start-line="163" selection-start-column="44" selection-end-line="163" selection-end-column="44" />
           <folding>
             <element signature="e#2361#2476#0" />
-            <element signature="e#2492#3147#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PUI_HW5_05_Product Details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="72" column="45" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="418" column="14" selection-start-line="418" selection-start-column="14" selection-end-line="418" selection-end-column="14" />
+        <state relative-caret-position="192">
+          <caret line="119" column="1" lean-forward="true" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PUI_HW5_05_Product Details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="98" column="50" lean-forward="true" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
+          <folding>
+            <element signature="n#div#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

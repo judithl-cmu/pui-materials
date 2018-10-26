@@ -14,12 +14,12 @@
         <div class="navbar-top">
             <a href="PUI_HW5_Homepage.html"><img id="ic-logo" src="PUI-HW6-sources/icons/ic_logo.svg" alt="muddy paw logo" width=40px/></a>
             <input id="search-bar" type="text" name="search" placeholder="Search"/>
-            <div class="ic-cart-wrapper">
-                <img id="ic-cart" src="PUI-HW5-sources/icons/ic_cart.svg" alt="shopping cart icon" width=24px />
-                <div class="ic-count" id="ic-cart-details">
-                    <p id="cart-count-text">3</p>
-                </div>
-            </div>>
+                <a href="PUI_HW6_Cart%20page.html" class="ic-cart-wrapper">
+                    <img id="ic-cart" src="PUI-HW5-sources/icons/ic_cart.svg" alt="shopping cart icon" width=24px />
+                    <div class="ic-count" id="ic-cart-details">
+                        <p id="cart-count-text">4</p>
+                    </div>
+                </a>
         </div>
         <p class="nav-link-dark"><a href="PUI_HW5_02_Products.html" style="text-decoration: none; color: #131313">back</a></p>
         <div class="wrapper">
@@ -27,12 +27,21 @@
                 <img id="detail-img-yellowCB" src="PUI-HW6-sources/CB-1.jpg"/>
             </div>
             <br>
+            <!-- pop up message for cases where color or size has not been selected -->
+            <div class="popup-overlay">
+                <div class="popup-content">
+                    <p id="popup-message"></p>
+                    <button id="btn-ok">Okay!</button>
+                </div>
+            </div>
             <div class="product-detail">
-                <h1 class="product-detail-title" id="test-title">Cat Backpack</h1>
+                <h1 class="product-detail-title" id="test-title">Space Cat Backpack</h1>
                 <p class="product-detail-price">$35.99</p>
                 <p class="body-text">
                 Bring your meow friend to the mountain in this bright and light backpack! Waterproof material makes it perfect for all weather, and the holes on every face ensures that there’s always enough fresh air.
                 </p>
+
+                <!-- dropdown menus -->
                 <div class="dropdown">
                     <button id="product-color">Color</button>
                     <div class="dropdown-content">
@@ -51,26 +60,70 @@
                         <p id="size-large">Large</p>
                     </div>
                 </div>
+
+                <div class="qty-cart-wrapper">
                 <!-- quantity selector -->
-                <div class="quantity-selector-container">
-                    <div class="quantity-btn">
-                        <button id="yellowCB-quantity-remove" class="qty-left-btn">
-                            -
-                        </button>
-                        <div id="yellowCB-quantity-content" class="qty-content"></div>
-                        <button id="yellowCB-quantity-add" class="qty-right-btn">
-                            +
-                        </button>
+                    <div class="quantity-selector-container">
+                        <div class="quantity-btn">
+                            <button id="yellowCB-quantity-remove" class="qty-left-btn">
+                                -
+                            </button>
+                            <div id="yellowCB-quantity-content" class="qty-content"></div>
+                            <button id="yellowCB-quantity-add" class="qty-right-btn">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                    <button id="add-to-cart">Add to Cart</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="product-carousel">
+            <h2 id="carousel-title">Similar Product</h2>
+            <div id="carousel-wrapper">
+                <div id="carousel-widget">
+                    <div id="carousel-container">
+                        <div class="carousel-grid">
+                            <img class="product-carousel-img" src="PUI-HW6-sources/CB-2.jpg" />
+                            <h3 class="product-info">Pokemon Cat Backpack</h3>
+                            <p class="product-price">$35.99</p>
+                        </div>
+                        <div class="carousel-grid">
+                            <img class="product-carousel-img" src="PUI-HW6-sources/CH-4.jpg" />
+                            <h3 class="product-info">Sailor Cat Harness</h3>
+                            <p class="product-price">$19.99</p>
+                        </div>
+                        <div class="carousel-grid">
+                            <img class="product-carousel-img" src="PUI-HW6-sources/CH-2.jpg"/>
+                            <h3 class="product-info">Chocolate Cat Harness</h3>
+                            <p class="product-price">$19.99</p>
+                        </div>
+                        <div class="carousel-grid">
+                            <img class="product-carousel-img" src="PUI-HW6-sources/CH-6.jpg"/>
+                            <h3 class="product-info">Sky Blue Cat Harness</h3>
+                            <p class="product-price">$21.99</p>
+                        </div>
+                        <div class="carousel-grid">
+                            <img class="product-carousel-img" src="PUI-HW6-sources/CB-3.jpg"/>
+                            <h3 class="product-info">Dope Cat Backpack</h3>
+                            <p class="product-price">$23.99</p>
+                        </div>
+                        <div class="carousel-grid">
+                            <img class="product-carousel-img" src="PUI-HW6-sources/CH-3.jpg"/>
+                            <h3 class="product-info">Yellow-Black Plaid Cat Harness</h3>
+                            <p class="product-price">$23.99</p>
+                        </div>
                     </div>
                 </div>
-
-                <button id="add-to-cart">Add to Cart</button>
-
-                <!-- pop up message for cases where -->
-                <div class="popup-overlay">
-                    <div class="popup-content">
-                        <p id="popup-message"></p>
-                        <button id="btn-ok">Okay!</button>
+                <div id="left-arrow" class="carousel-arrow left-arrow"></div>
+                <div id="right-arrow" class="carousel-arrow right-arrow"></div>
+                    <div class="lds-ring">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
             </div>

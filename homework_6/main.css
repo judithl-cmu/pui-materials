@@ -48,19 +48,27 @@ a.nav-link {
     border: 0px;
     color: white;
     height: 65px;
-    width: 336px;
     font-family: "Josefin Sans", "Arial", sans-serif;
     font-weight: 500;
     font-size: 24px;
+    text-align: center;
     text-transform: uppercase;
-    position: absolute;
     letter-spacing: 0.1px;
     padding-top: 8px;
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.36);
+}
+
+.btn-hp, .btn-checkout {
+    position: absolute;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.36);
+    width: 336px;
+}
+
+#add-to-cart {
+    width: 280px;
 }
 
 #btn-hp-cats {
@@ -106,7 +114,7 @@ PRODUCT GALLERY
     font-family: "Josefin Sans", "Helvetica", sans-serif;
     font-weight: 400;
     font-size: 24px;
-    letter-spacing: 0.12;
+    letter-spacing: 0.12px;
     height: 48px;
     color: #454545;
 }
@@ -334,19 +342,12 @@ button#product-color, button#product-size {
 .wrapper {
     overflow: hidden;
     border-bottom: 1px solid #131313;
-    padding-bottom: 200px;
+    padding-bottom: 70px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
     margin-left: 5%;
 }
-
-button#add-to-cart {
-    position: relative;
-    top: 170px;
-    left: 100px;
-}
-
 
 .dropdown, .dropdown-right {
     position: relative;
@@ -392,28 +393,32 @@ button#add-to-cart {
 .popup-overlay {
     visibility: hidden;
     position: absolute;
-    background: white;
     border: 0px;
     border-radius: 3px;
-    box-shadow: 0 12px 20px rgba(238, 238, 238, 0.5);
-    z-index: 1;
-    width: 40%;
-    height: 200px;
+    z-index: 2;
+    width: 340px;
+    height: 280px;
+    top: 250px;
+    left: 45%;
 }
 
 .popup-overlay.active {
     visibility: visible;
     text-align: center;
+    border-radius: 3px;
 }
 
 #popup-message {
     font-family: 'Noto Serif JP';
-    font-size: 17px;
+    font-size: 15px;
+    text-align: center;
 }
 
 .popup-content {
     visibility: hidden;
-    background: white;
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 12px 20px rgba(218, 218, 218, 0.43);
+    padding: 18px 35px 27px 35px;
 }
 
 .popup-content.active {
@@ -421,14 +426,17 @@ button#add-to-cart {
 }
 
 #btn-ok {
-    display: inline-block;
+    display: block;
     vertical-align: middle;
     width: 140px;
     height: 45px;
     background-color: #131313;
+    border: 0px;
     font-family: 'Josefin Sans', 'Helvetica', sans-serif;
     font-size: 20px;
     color: white;
+    margin: auto;
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.36);
 }
 
 /*
@@ -438,10 +446,19 @@ SHOPPING CART
 */
 
 #page-title-cart {
-    margin-left: 3%;
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 /* elements */
+
+.thumbnail-head, .details-head, .price-head, .quantity-head, .remove-head, .price-total-head {
+    height: 50px;
+    font-family: 'Josefin Sans', 'Helvetica', sans-serif;
+    text-transform: uppercase;
+    color: #666666;
+    font-size: 16px;
+}
 
 .cart-img-thumbnail {
     width: 18%;
@@ -476,15 +493,15 @@ span.label, span.value {
     text-transform: uppercase;
 }
 
-.cart-price {
-    width: 20%;
+.cart-price, .price-head {
+    width: 15%;
     padding-left: 14px;
 }
 
 /* manipulate quantity */
 
 .cart-quantity {
-    width: 3%;
+    width: 8%;
     font-size: 22px;
     color: #131313;
     font-family: 'Josefin Sans', 'Helvetica', sans-serif;
@@ -525,8 +542,10 @@ td {
 }
 
 .subtotal-wrapper {
+    margin-top: 25px;
     float: right;
     margin-right: 13%;
+    margin-bottom: 30px;
 }
 
 .subtotal-text, #subtotal {
@@ -555,7 +574,7 @@ a.nav-link-dark {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 17px;
 }
 
 /*
@@ -564,13 +583,25 @@ ADD-TO-CART
 ====================
 */
 
-.ic-cart-wrapper {
+.ic-cart-wrapper, .ic-cart-wrapper-right {
     margin-right: 5%;
+    position: relative;
+    top: 10px;
+    right: 0;
+}
+
+.ic-cart-wrapper-right {
+    right: -85%;
 }
 
 #ic-cart-details {
     margin-right: 0;
 }
+
+img#ic-cart, .ic-count {
+    display: inline-block;
+}
+
 
 .ic-count {
     height: 15px;
@@ -582,6 +613,8 @@ ADD-TO-CART
     text-align: center;
     line-height: 0px;
     position: relative;
+    left: 16px;
+    top: -35px;
 }
 
 #cart-count-text {
@@ -595,15 +628,20 @@ ADD-TO-CART
 
 .quantity-selector-container {
     float: left;
-    width: 260px;
+    width: 186px;
+}
+.qty-cart-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin-top: 100px;
+    padding-left: 0;
 }
 
 .quantity-selector-container, .quantity-btn, .qty-left-btn {
     height: 65px;
     float: left;
-    padding-left: 14px;
     padding-right: 14px;
-    margin-top: 20px;
     font-size: 24px;
     display: inline-block;
     border: 0;
@@ -618,7 +656,6 @@ ADD-TO-CART
     float: right;
     padding-left: 14px;
     padding-right: 14px;
-    margin-top: 20px;
     font-size: 24px;
     display: inline-block;
     border: 0;
@@ -630,7 +667,7 @@ ADD-TO-CART
     line-height: 61px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: 20px;
+
     display: inline-block;
     border-top: 3px solid #131313;
     border-bottom: 3px solid #131313;

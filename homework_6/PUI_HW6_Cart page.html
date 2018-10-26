@@ -12,11 +12,29 @@
     </head>
     
     <body>
-        <h1 class="page-title" id="page-title-cart">CART</h1>
+        <div class="navbar-top">
+            <img id="ic-logo" src="PUI-HW6-sources/icons/ic_logo.svg" alt="muddy paw logo" width=40px/>
+            <div class="ic-cart-wrapper-right">
+                <img id="ic-cart" src="PUI-HW5-sources/icons/ic_cart.svg" alt="shopping cart icon" width=24px />
+                <div class="ic-count" id="ic-cart-details">
+                    <p id="cart-count-text">4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-page-nav">
+            <h1 class="page-title" id="page-title-cart">CART</h1>
+            <button class="btn-checkout">checkout</button>
+        </div>
         <table id="cart-table">
             <thead>
                 <tr>
-
+                    <td class="thumbnail-head"></td>
+                    <td class="details-head">product</td>
+                    <td class="price-head">price</td>
+                    <td class="quantity-head">qty</td>
+                    <td class="remove-head"></td>
+                    <td class="price-total-head">total</td>
                 </tr>
             </thead>
             <tbody>

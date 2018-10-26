@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+    // update quantity in cart every time the detail page loads so it sticks
+    var updatedCart = JSON.parse(localStorage.getItem("item"));
+    var totalQty = 4;
+
+    for (var l = 0; l < updatedCart.length; l++) {
+        totalQty += updatedCart[l]["quantity"];
+    }
+
+    $("#cart-count-text").html(totalQty);
+
     // modify options on Product Detail page
 
     $(".dropdown-content p").on("click", function () {
@@ -42,7 +52,10 @@ $(document).ready(function() {
     });
 
     $("#yellowCB-quantity-add").on("click", function() {
-        quantity += 1;
+        if (quantity <= 20) {
+            quantity += 1;
+        }
+
         $("#yellowCB-quantity-content").text(quantity);
     });
 
@@ -66,8 +79,6 @@ $(document).ready(function() {
         var productQty = parseInt($("#yellowCB-quantity-content").text());
 
         var product = new Product(productImgURL, productName, productPrice, productColor, productSize, productQty);
-
-        // test code
 
         // check if size and color have been selected
         // if one is not selected, alert messages
@@ -117,7 +128,7 @@ $(document).ready(function() {
                 var hasSize = cart.some(function (object) {
                     return (object["size"] === productSize);
                 });
-                //
+
                 var hasColor = cart.some(function (product) {
                     return product["color"] === productColor;
                 });
@@ -125,11 +136,11 @@ $(document).ready(function() {
                 if (hasSize && hasColor) {
                     console.log(productQty);
 
-                    // test code
                     // locate existing item with same size and color
                     for (var k = 0; k < cart.length; k++) {
                         if (cart[k]["size"] == productSize && cart[k]["color"] == productColor) {
                             cart[k]["quantity"] += productQty;
+                            console.log("testing successful");
                         }
                     }
                 }
@@ -140,93 +151,73 @@ $(document).ready(function() {
 
                 localStorage.setItem("item", JSON.stringify(cart));
 
-                // test code
                 // update quantity in cart icon
                 var updatedQty = parseInt($("#cart-count-text").text()) + productQty;
                 $("#cart-count-text").html(updatedQty);
-
             }
         }
-
     });
 
+    // function for slider
+
+    var carouselWidget = $("#carousel-widget");
+    var carousel = $("#carousel-container");
+    var rightArrow = $("#right-arrow");
+    var leftArrow = $("#left-arrow");
 
 
-    // grabbing information from html
+    const buildCarousel = (response) => {
 
+        const products = response.asins;
 
+        let displayProducts = "";
+        let i;
 
+        displayProducts += "<ul class='products'>";
 
+        products.forEach( (product) => {
 
+            displayProducts += `
 
+    <li class='product_cell' data-link='${product.detailPageUrl}'>
+      <div class='product_image'> <img class='asin_image' src='${product.imageHires}'/> </div>
+        
+      <div class='product_details'>  
 
+        <div class='product_title'>${product.title.substring(0, 20)}...</div>
+        <div class='asin_details'>
+          <div class='product_price'>${product.price}</div>
+        </div>
 
+      </div>
 
+    </li>`;
 
+        });
 
+        displayProducts += "</ul>";
 
+        $carousel.innerHTML = displayProducts;
 
+        const product_links = document.querySelectorAll(".product_cell");
+        let j;
+        for (j = 0; j < product_links.length; j++) {
+            product_links[j].addEventListener('click', function() {
+                let linkOut = this.getAttribute('data-link');
+                window.open("http://amazon.com" + linkOut );
+            });
+        }
+        //REMOVE LOADER TO DISPLAY RESULTS
+        setTimeout(() => { $loader.classList.add("fade-out"); }, 250);
 
-    // shopping cart save
-    // function saveCart() {
-    //      localStorage.setItem("cart", JSON.stringify(cart));
-    // }
-    //
+    }
+// LEFT AND RIGHT ARROWS
+    $leftArrow.addEventListener('click', () => {
+        $carouselWidget.scrollBy({ top: 0, left: -1 * $carouselWidget.offsetWidth, behavior: 'smooth' });
+    });
+    $rightArrow.addEventListener('click', () => {
+        $carouselWidget.scrollBy({ top: 0, left: $carouselWidget.offsetWidth, behavior: 'smooth' });
+    });
 
-    // function addToCart(name, price, quantity) {
-    //     for (var i in cart) {
-    //        if (cart[i].name === name) {
-    //            cart[i].count += count;
-    //            return;
-    //        }
-    //    }
-    //
-    //     var item = new Item(productTitle, productPrice, quantity);
-    //     cart.push(item);
-    //     saveCart();
-    // }
-    // // remove from cart
-    // function removeFromCart() {
-    //     for (var i in cart) {
-    //         if (cart[i].name === name) {
-    //             cart[i].count --;
-    //             if (cart[i].count == 0) {
-    //                 cart.splice(i, 1);
-    //             }
-    //             break;
-    //         }
-    //     }
-    //     saveCart();
-    // }
-    //
-    // // clear the cart
-    // function clearCart() {
-    //     cart = [];
-    //     saveCart();
-    // }
-    //
-    // // count cart
-    // function countCart() {
-    //     var totalCount = 0;
-    //     for (var i in cart) {
-    //         totalCount += cart[i].count;
-    //     }
-    // }
-    //
-    // // test if adding works on the same page
-    // $("#test-cart").on("click", function() {
-    //     $("#cart-table tr:last").after("<tr><td>hello we are testing!</td></tr>");
-    //     console.log("test is successful");
-    // });
-
+    init();
 });
-//     var newItem = JSON.parse(localStorage.getItem("itemInCart"));
-//     var count = 0;
-//
-//     if (newItem !== null) {
-//         localStorage.setItem("itemInCart", JSON.stringify(newItem));
-//         count += 1;
-//     }
-//
-//
-// });

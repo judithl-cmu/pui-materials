@@ -1,5 +1,13 @@
 $(document).ready(function() {
+    // update quantity in cart every time the detail page loads so it sticks
+    var updatedCart = JSON.parse(localStorage.getItem("item"));
+    var totalQty = 4;
 
+    for (var l = 0; l < updatedCart.length; l++) {
+        totalQty += updatedCart[l]["quantity"];
+    }
+
+    $("#cart-count-text").html(totalQty);
     // calculate subtotal
     var subtotal = 0;
 
@@ -43,10 +51,24 @@ $(document).ready(function() {
 
         subtotal -= priceToSubstract;
 
+        if (subtotal <= 0.00) {
+            subtotal = 0.00;
+        }
+
         // $("p:first").replaceWith("Hello world!");
+
+
+        // update quantity in cart icon
+        var qtyToRemove = parseInt($(this).parent().prev().text());
+        //
+        console.log(typeof qtyToRemove);
+        totalQty -= qtyToRemove;
+
+        $("#cart-count-text").html(totalQty);
+
         $("#subtotal").html(subtotal.toFixed(2));
-        console.log(subtotal);
-        return subtotal;
+
+
     });
 
     // calculate cart subtotal after having all the rows
