@@ -55,7 +55,7 @@ $(document).ready(function() {
         this.quantity = quantity;
     }
 
-
+    // add to cart and update cart quantity
     $("#add-to-cart").on("click", function() {
         // define constructor keys
         var productImgURL = $(".product-detail-img img").attr("src");
@@ -63,26 +63,91 @@ $(document).ready(function() {
         var productPrice = $(".product-detail-price").text();
         var productColor = $("#product-color").text();
         var productSize = $("#product-size").text();
-        var productQty = $("#yellowCB-quantity-content").text();
+        var productQty = parseInt($("#yellowCB-quantity-content").text());
 
         var product = new Product(productImgURL, productName, productPrice, productColor, productSize, productQty);
 
-        // initialize cart
-        var tempCart = [];
+        // test code
 
-        var cart = JSON.parse(localStorage.getItem("item"));
+        // check if size and color have been selected
+        // if one is not selected, alert messages
+        if ($("#product-color").text() == "Color" && $("#product-size").text() != "Size") {
+            $(".popup-over, .popup-content").addClass("active");
+            $("#popup-message").html("Pick a color for your pal!");
 
-        if (cart == null) {
-            tempCart.push(product);
-            localStorage.setItem("item", JSON.stringify(tempCart));
+            // close the pop-up
+            $("#btn-ok").on("click", function() {
+                $(".popup-overlay, .popup-content").removeClass("active");
+            });
         }
 
+        else if ($("#product-size").text() == "Size" && $("#product-color").text() != "Color") {
+            $(".popup-over, .popup-content").addClass("active");
+            $("#popup-message").html("Select the correct size so your pal stays comfy!");
+
+            // close the pop-up
+            $("#btn-ok").on("click", function() {
+                $(".popup-overlay, .popup-content").removeClass("active");
+            });
+        }
+
+        else if ($("#product-color").text() == "Color" && $("#product-size").text() == "Size") {
+            $(".popup-over, .popup-content").addClass("active");
+            $("#popup-message").html("Remember to choose a size and color for your pal! :)");
+
+            // close the pop-up
+            $("#btn-ok").on("click", function() {
+                $(".popup-overlay, .popup-content").removeClass("active");
+            });
+        }
+
+        // if both have been selected, initialize cart
         else {
-            cart.push(product);
-            localStorage.setItem("item", JSON.stringify(cart));
+            var tempCart = [];
+
+            var cart = JSON.parse(localStorage.getItem("item"));
+
+            if (cart == null) {
+
+                tempCart.push(product);
+                localStorage.setItem("item", JSON.stringify(tempCart));
+            }
+
+            else {
+                var hasSize = cart.some(function (object) {
+                    return (object["size"] === productSize);
+                });
+                //
+                var hasColor = cart.some(function (product) {
+                    return product["color"] === productColor;
+                });
+
+                if (hasSize && hasColor) {
+                    console.log(productQty);
+
+                    // test code
+                    // locate existing item with same size and color
+                    for (var k = 0; k < cart.length; k++) {
+                        if (cart[k]["size"] == productSize && cart[k]["color"] == productColor) {
+                            cart[k]["quantity"] += productQty;
+                        }
+                    }
+                }
+
+                else {
+                    cart.push(product);
+                }
+
+                localStorage.setItem("item", JSON.stringify(cart));
+
+                // test code
+                // update quantity in cart icon
+                var updatedQty = parseInt($("#cart-count-text").text()) + productQty;
+                $("#cart-count-text").html(updatedQty);
+
+            }
         }
 
-        // sticking info into cart
     });
 
 
@@ -107,14 +172,7 @@ $(document).ready(function() {
     //      localStorage.setItem("cart", JSON.stringify(cart));
     // }
     //
-    // // add to cart
-    // var cart = [];
-    // var Item = function(name, price, quantity) {
-    //     this.name = name;
-    //     this.price = price;
-    //     this.quantity = quantity;
-    // }
-    // //
+
     // function addToCart(name, price, quantity) {
     //     for (var i in cart) {
     //        if (cart[i].name === name) {

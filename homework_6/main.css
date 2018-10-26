@@ -387,6 +387,50 @@ button#add-to-cart {
 	line-height: 1.5em;
 }
 
+/* pop-up message */
+
+.popup-overlay {
+    visibility: hidden;
+    position: absolute;
+    background: white;
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: 0 12px 20px rgba(238, 238, 238, 0.5);
+    z-index: 1;
+    width: 40%;
+    height: 200px;
+}
+
+.popup-overlay.active {
+    visibility: visible;
+    text-align: center;
+}
+
+#popup-message {
+    font-family: 'Noto Serif JP';
+    font-size: 17px;
+}
+
+.popup-content {
+    visibility: hidden;
+    background: white;
+}
+
+.popup-content.active {
+    visibility: visible;
+}
+
+#btn-ok {
+    display: inline-block;
+    vertical-align: middle;
+    width: 140px;
+    height: 45px;
+    background-color: #131313;
+    font-family: 'Josefin Sans', 'Helvetica', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
 /*
 ====================
 SHOPPING CART
@@ -480,12 +524,16 @@ td {
     border-bottom: 1px solid #4B4B4B;
 }
 
-#subtotal {
+.subtotal-wrapper {
+    float: right;
+    margin-right: 13%;
+}
+
+.subtotal-text, #subtotal {
     font-size: 24px;
     font-family: 'Josefin Sans', 'Helvetica', sans-serif;
     color: #131313;
     text-align: right;
-    width: 80%;
 }
 
 /* bottom navigation */
@@ -516,20 +564,28 @@ ADD-TO-CART
 ====================
 */
 
+.ic-cart-wrapper {
+    margin-right: 5%;
+}
+
+#ic-cart-details {
+    margin-right: 0;
+}
+
 .ic-count {
-    height: 12px;
-    width: 12px;
+    height: 15px;
+    width: 15px;
     background-color: #ed492d;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    display: none;
     text-align: center;
     line-height: 0px;
+    position: relative;
 }
 
-.cart-count-text {
-    font-size: 8px;
+#cart-count-text {
+    font-size: 10px;
     font-family: 'Josefin Sans', 'Helvetica', sans-serif;
     color: white;
     font-weight: 500;
@@ -582,11 +638,19 @@ ADD-TO-CART
     text-align: right;
 }
 
-
 .qty-left-btn, .qty-right-btn {
     background-color: #131313;
     color: white;
     text-align: center;
 }
+
+
+/*
+====================
+REMAINING QUESTIONS
+====================
+*/
+
+/* How doe relative position work, exactly? */
 
 

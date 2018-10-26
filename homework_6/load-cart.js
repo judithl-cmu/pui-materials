@@ -2,16 +2,6 @@ $(document).ready(function() {
 
     // calculate subtotal
     var subtotal = 0;
-    $("#cart-table").find(".cart-price-narrow").each(function(){
-        var splitStrToArr = $(this).text().split("");
-        var spliceIdx = splitStrToArr.indexOf("$");
-        splitStrToArr.splice(spliceIdx, 1);
-        var newStr = splitStrToArr.join("");
-        var priceInCurrentTable = parseFloat(newStr);
-
-        subtotal += priceInCurrentTable;
-        return subtotal;
-    });
 
     var addedProduct = JSON.parse(localStorage.getItem("item"));
     var cartLen = addedProduct.length;
@@ -44,7 +34,7 @@ $(document).ready(function() {
 
         localStorage.setItem("item", JSON.stringify(newArr));
 
-        // update subtotal
+        // update subtotal with remove
         var qtySib = $(this).parent().next().children().text();
         var arrToParse = qtySib.split("");
         var priceSpliceIdx = arrToParse.indexOf("$");
@@ -52,7 +42,22 @@ $(document).ready(function() {
         var priceToSubstract = parseFloat(arrToParse.join(""));
 
         subtotal -= priceToSubstract;
+
+        // $("p:first").replaceWith("Hello world!");
+        $("#subtotal").html(subtotal.toFixed(2));
         console.log(subtotal);
+        return subtotal;
+    });
+
+    // calculate cart subtotal after having all the rows
+    $("#cart-table").find(".cart-price-narrow").each(function(){
+        var splitStrToArr = $(this).text().split("");
+        var spliceIdx = splitStrToArr.indexOf("$");
+        splitStrToArr.splice(spliceIdx, 1);
+        var newStr = splitStrToArr.join("");
+        var priceInCurrentTable = parseFloat(newStr);
+
+        subtotal += priceInCurrentTable;
         return subtotal;
     });
 
