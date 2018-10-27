@@ -160,64 +160,33 @@ $(document).ready(function() {
 
     // function for slider
 
-    var carouselWidget = $("#carousel-widget");
-    var carousel = $("#carousel-container");
+    var carouselWidget = document.getElementById("carousel-widget");
     var rightArrow = $("#right-arrow");
     var leftArrow = $("#left-arrow");
 
+    // hover to change color of arrows
 
-    const buildCarousel = (response) => {
-
-        const products = response.asins;
-
-        let displayProducts = "";
-        let i;
-
-        displayProducts += "<ul class='products'>";
-
-        products.forEach( (product) => {
-
-            displayProducts += `
-
-    <li class='product_cell' data-link='${product.detailPageUrl}'>
-      <div class='product_image'> <img class='asin_image' src='${product.imageHires}'/> </div>
-        
-      <div class='product_details'>  
-
-        <div class='product_title'>${product.title.substring(0, 20)}...</div>
-        <div class='asin_details'>
-          <div class='product_price'>${product.price}</div>
-        </div>
-
-      </div>
-
-    </li>`;
-
-        });
-
-        displayProducts += "</ul>";
-
-        $carousel.innerHTML = displayProducts;
-
-        const product_links = document.querySelectorAll(".product_cell");
-        let j;
-        for (j = 0; j < product_links.length; j++) {
-            product_links[j].addEventListener('click', function() {
-                let linkOut = this.getAttribute('data-link');
-                window.open("http://amazon.com" + linkOut );
-            });
-        }
-        //REMOVE LOADER TO DISPLAY RESULTS
-        setTimeout(() => { $loader.classList.add("fade-out"); }, 250);
-
-    }
-// LEFT AND RIGHT ARROWS
-    $leftArrow.addEventListener('click', () => {
-        $carouselWidget.scrollBy({ top: 0, left: -1 * $carouselWidget.offsetWidth, behavior: 'smooth' });
-    });
-    $rightArrow.addEventListener('click', () => {
-        $carouselWidget.scrollBy({ top: 0, left: $carouselWidget.offsetWidth, behavior: 'smooth' });
+    $(leftArrow).hover(function() {
+        $("#left-arrow-img").attr("src", "PUI-HW6-sources/icons/left-arrow-white.svg");
+    }, function() {
+        $("#left-arrow-img").attr("src", "PUI-HW6-sources/icons/left-arrow.svg");
     });
 
-    init();
+    $(rightArrow).hover(function() {
+        $("#right-arrow-img").attr("src", "PUI-HW6-sources/icons/right-arrow-white.svg");
+    }, function() {
+        $("#right-arrow-img").attr("src", "PUI-HW6-sources/icons/right-arrow.svg");
+    });
+
+    // scrolls!
+
+    leftArrow.on("click", function() {
+        console.log("testing scrolling: if you are seeing this, you should blame the next function");
+        carouselWidget.scrollBy({ top: 0, left: -1 * carouselWidget.offsetWidth, behavior: 'smooth'});
+    });
+
+    rightArrow.on("click", function() {
+        carouselWidget.scrollBy({ top: 0, left: carouselWidget.offsetWidth, behavior: 'smooth' });
+    });
+
 });

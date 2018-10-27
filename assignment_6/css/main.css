@@ -544,7 +544,7 @@ td {
 .subtotal-wrapper {
     margin-top: 25px;
     float: right;
-    margin-right: 13%;
+    margin-right: 14%;
     margin-bottom: 30px;
 }
 
@@ -591,7 +591,7 @@ ADD-TO-CART
 }
 
 .ic-cart-wrapper-right {
-    right: -85%;
+    right: -89%;
 }
 
 #ic-cart-details {
@@ -681,13 +681,93 @@ img#ic-cart, .ic-count {
     text-align: center;
 }
 
-
 /*
 ====================
-REMAINING QUESTIONS
+CAROUSEL
 ====================
 */
 
-/* How doe relative position work, exactly? */
+#carousel-title {
+    margin-left: 5%;
+    font-family: 'Josefin Sans', 'Helvetica', sans-serif;
+    font-size: 24px;
+    color: #131313;
+}
 
+#carousel-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-gap: 0;
+}
+
+.carousel-grid {
+    background-color: white;
+    padding: 10px;
+}
+
+.carousel-grid:hover {
+    background-color: #F9F9F9;
+}
+
+.product-carousel-img {
+    width: 92%;
+    display: block;
+    margin: auto;
+    height: auto;
+}
+
+.product-carousel-img:hover {
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+#carousel-widget {
+    position: relative;
+    height: 280px;
+    width: 920px;
+    overflow-y: hidden;
+    margin: auto;
+}
+
+.carousel-arrow {
+    border: 3px solid #131313;
+    width: 36px;
+    height: 60px;
+    position: absolute;
+    top: 840px;
+}
+
+.left-arrow {
+    left: 10%;
+}
+
+.right-arrow {
+    left: 88.5%;
+}
+
+#left-arrow-img, #right-arrow-img {
+    position: relative;
+    top: 18px;
+    width: 26px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.carousel-arrow:hover {
+    background-color: #131313;
+}
+
+#carousel-widget{
+    -webkit-overflow-scrolling: touch;
+
+}
+#carousel-container{
+    position: absolute;
+    width: max-content;
+    height:280px;
+}
 
