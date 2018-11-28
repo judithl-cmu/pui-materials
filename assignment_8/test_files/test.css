@@ -1,0 +1,29 @@
+/* testing animation - success */
+
+/*#test-path {*/
+    /*stroke-dasharray: 800;*/
+    /*stroke-dashoffset: 800;*/
+    /*animation: test-animation 3s forwards;*/
+}
+
+/*@keyframes test-animation {*/
+
+    /*100% {*/
+        /*stroke-dashoffset: 0;*/
+    /*}*/
+/*}*/
+
+/*.wrapper {*/
+    /*height: 2000px;*/
+/*}*/
+
+/*#timeline-test {*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*margin: auto;*/
+    /*width: 100%;*/
+/*}*/
+
