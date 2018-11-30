@@ -34,7 +34,7 @@
 
     <div class="intro">
         <div class="intro-img">
-            <img class="hp-bg-img" src="source/pathway-in-monet-s-garden-at-giverny-1902-1024x984.jpg"/>
+            <img class="hp-bg-img img-fade" src="source/pathway-in-monet-s-garden-at-giverny-1902-1024x984.jpg"/>
         </div>
         <h3 class="quotes" id="hp-quote">My wish is to stay always like this, living quietly in a corner of nature.</h3>
         <div class="intro-text">
@@ -106,11 +106,16 @@
            class="body-text" id="impression-2">1874<br>
             The first Impressionist exhibition was held in 1874 and the main purpose was not so much for the participants to promote a new art style as to free themselves from the constraints of Salon de Paris.
         </p>
+
     </div>
     <!-- vetheuil & giverny -->
     <div class="text-giverny">
-        <h4 class="section-divider" id="divider-giverny">Vétheuil and Giverny / 1880s</h4>
-        <p class="body-text">
+        <h4 data-bottom-top="transform:translateY(-60px);opacity: 0"
+            data-center="transform:translateY(0px); opacity: 1"
+            class="section-divider" id="divider-giverny">Vétheuil and Giverny / 1880s</h4>
+        <p data-bottom-top="transform:translateY(-80px);opacity: 0"
+           data-center="transform:translateY(0px); opacity: 1"
+           class="body-text" id="giverny-details">
             In September 1879, Camille, wife of Monet, died at the age of 32. After several difficult months following the death of Camille, Monet created some of his best paintings in the 19th century.<br>
             During the early 1880s, Monet painted several groups of landscapes and seascapes in what he considered to be campaigns to document the French countryside. In 1883, Monet bought a house in Giverny, where he planted a large garden and where he painted.
         </p>
@@ -121,7 +126,7 @@
     </div>
 
     <!-- rouen series -->
-    <div class="morph">
+    <div class="morph img-blur">
         <h4 data-bottom-top="transform:translateY(-60px);opacity: 0"
             data-center="transform:translateY(0px); opacity: 1"
             class="section-divider">Series / 1890s</h4>
@@ -130,15 +135,19 @@
            class="body-text text-series">
             Monet's ambition of documenting the French countryside led him to adopt a method of painting the same scene many times in order to capture the changing of light and the passing of the seasons.
         </p>
-        <p data-bottom-top="transform:translateY(-80px);opacity: 0"
-           data--44p-bottom="transform:translateY(0px); opacity: 1"
+        <p data-bottom-top="transform:translateY(-100px);opacity: 0"
+           data-center="transform:translateY(0px); opacity: 1"
            class="body-text text-series">
             One of Monet’s most famous series is that of Rouen Cathedral, created in the 1892 and 1893 in Rouen, Normandy, then reworked in Monet’s studio in 1894.
         </p>
-        <p class="body-text text-series">
+        <p data-bottom-top="transform:translateY(-115px);opacity: 0"
+           data--44p-bottom="transform:translateY(0px); opacity: 1"
+           class="body-text text-series">
             Painting light gave Monet intense difficulties because of its extreme subtlety and ever-changing nature. However, his ability to capture the essence of the scenes quickly, which helped him achieve his desired effects.
         </p>
-        <p class="body-text text-series">
+        <p data-bottom-top="transform:translateY(-130px);opacity: 0"
+           data--44p-bottom="transform:translateY(0px); opacity: 1"
+           class="body-text text-series">
             The cathedral allowed him to highlight the paradox between a seemingly permanent, solid structure and the ever-changing light which constantly plays with our perception of it.
         </p>
     </div>
@@ -155,7 +164,7 @@
             Monet began painting the waterlilies, first in vertical views with a Japanese bridge as a central feature, and later in the series of large-scale paintings that was to occupy him continuously for the next 20 years of his life. The artist had painted his first renditions in the 1890s but produced the majority of the works during the final two decades of his life.<br>
             After losing both his second wife, Alice, and his eldest son, Jean, in 1911 and 1914 respectively, the artist sought consolation by embarking upon a great new work, a series of massive Water Lilies panels.
         </p>
-        <img id="waterlilies-painting" src="source/Claude_Monet_-_Water_Lilies_-_1906,_Ryerson.jpg" />
+        <div id="waterlilies-painting"></div>
     </div>
 
     <div class="footer">
@@ -178,6 +187,8 @@
         var sInit = skrollr.init({
             forceHeight: false
         });
+    </script>
+    <script type="text/javascript" src="js/lib/jquery.ripples-min.js">
     </script>
     <script src="js/lib/jquery.morphing.min.js"></script>
 
