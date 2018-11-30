@@ -3,7 +3,7 @@ body {
     background-color: #171717;
 }
 
-.hp-bg-img, .img-early-years {
+.hp-bg-img {
     width: 100%;
     margin-top: -100px;
 }
@@ -112,17 +112,6 @@ SCROLLING MOUSE
 
 /*
 ====================
-TIMELINE ANIMATION
-====================
-*/
-
-#timeline-path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-}
-
-/*
-====================
 TEXT STYLES
 ====================
 */
@@ -208,8 +197,22 @@ EARLY YEARS
 .text-early-years {
     width: 70%;
     margin-left: 15%;
+    position: relative;
 }
 
+.img-early-years {
+    position: relative;
+    height: 100vh;
+}
+
+.water-layers {
+    height: 100vh;
+    display: block;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
 /*
 ====================
 IMPRESSIONISM
@@ -223,19 +226,19 @@ IMPRESSIONISM
 
 .text-impressionism {
     margin-left: 10%;
-    margin-top: 50vh;
     position: relative;
 }
 
-#impression-1, #impression-2 {
+#divider-impressionism {
+    padding-top: 30vh;
+}
+
+#impression-1 {
     position: absolute;
     z-index: 2;
     width: 60%;
 }
 
-#impression-2 {
-    top: 31vh;
-}
 
 /*#impression-2 {*/
     /*top: 2870px;*/
@@ -249,7 +252,7 @@ GIVERNY
 
 .text-giverny {
     margin: auto;
-    top: 50vh;
+    top: 80vh;
     width: 70%;
     position: relative;
 }
@@ -261,6 +264,8 @@ GIVERNY
 .container-giverny {
     width: 90%;
     margin: auto;
+    position: relative;
+    top: 80vh;
 }
 
 #divider-giverny, #giverny-details {
@@ -298,7 +303,6 @@ i {
     -o-transform: translateZ(0px);
     transform: translateZ(0px);
 }
-
 
 /*
 ====================
@@ -360,9 +364,25 @@ LATE YEARS
 ====================
 */
 
+.text-background {
+    position: absolute;
+    width: 50%;
+    top: 10vh;
+    left: 35vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+}
+
 .late-years {
     position: relative;
     top: 100vh;
+}
+
+#divider-late, #late-1, #late-2 {
+    color: #171717;
 }
 
 
@@ -452,6 +472,6 @@ OTHER ARTISTS INFO
     box-shadow: 0 2px 10px rgba(239, 239, 239, 0.24);
     width: 260px;
     position: absolute;
-    z-index: 3;
+    z-index: 10;
     display: none;
 }

@@ -55,12 +55,6 @@
         <a id="link" target="_blank" href="">View More</a>
     </div>
 
-    <!-- timeline animation -->
-    <div class="timeline-wrapper">
-        <svg id="timeline">
-            <path id="timeline-path" />
-        </svg>
-    </div>
     <!-- scroll animation -->
     <div class="container-center">
         <div class="mouse">
@@ -68,7 +62,14 @@
     </div>
 
     <!-- early years -->
-    <img class="img-early-years" src="source/Claude_Monet_La_Grenouillére.jpg"/>
+
+    <!-- water wave animation -->
+    <div class="img-early-years">
+        <img class="water-layers" src="source/Claude_Monet_La_Grenouillére.jpg"/>
+        <img class="water-layers water-animate" src="source/Claude_Monet_La_Grenouillére-water-layer.png" />
+
+    </div>
+
     <div class="text-early-years">
         <h4 data-bottom-top="transform:translateY(-60px);opacity: 0"
             data-center="transform:translateY(0px); opacity: 1"
@@ -90,22 +91,22 @@
         </p>
     </div>
     <!---->
-    <img class="img-impressionism" src="source/1024px-Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg"/>
+
     <div class="text-impressionism">
+        <img class="img-impressionism" src="source/1024px-Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg"/>
         <h4 data-bottom-top="transform:translateY(-60px);opacity: 0"
             data-center="transform:translateY(0px); opacity: 1"
             class="section-divider" id="divider-impressionism">Impressionism / 1870s</h4>
         <p data-bottom-top="transform:translateY(-80px);opacity: 0"
            data-center="transform:translateY(0px); opacity: 1"
            class="body-text" id="impression-1">1872<br>
-            Impression: Sunrise was painted in 1872. From the painting, art critic Louis Leroy coined the term “Impressionism”.<br>
-            In 1873, the artists formed their own arts organization, "Societe Anonyme Coopérative des Artistes Peintres, Sculpteurs et Graveurs," or the Cooperative and Anonymous Association of Painters, Sculptors and Engravers.
-        </p>
-        <p data-bottom-top="transform:translateY(-80px);opacity: 0"
-           data--44p-bottom="transform:translateY(0px); opacity: 1"
-           class="body-text" id="impression-2">1874<br>
+            <em><b>Impression: Sunrise</b></em> was painted in 1872. From the painting, art critic Louis Leroy coined the term “Impressionism”.<br>
+            In 1873, the artists formed their own arts organization, "Societe Anonyme Coopérative des Artistes Peintres, Sculpteurs et Graveurs," or the Cooperative and Anonymous Association of Painters, Sculptors and Engravers.<br>
+            <br>
+            1874<br>
             The first Impressionist exhibition was held in 1874 and the main purpose was not so much for the participants to promote a new art style as to free themselves from the constraints of Salon de Paris.
         </p>
+
 
     </div>
     <!-- vetheuil & giverny -->
@@ -153,18 +154,29 @@
     </div>
 
     <!-- later years -->
-    <div class="late-years">
-        <h4 class="section-divider">Late Years / 1890s Onwards</h4>
-        <p class="body-text" id="late-1">
-            1893<br>
-            Monet purchased additional land with a water meadow. In 1893 he began a vast landscaping project which included lily ponds that would become the subjects of his best-known works.
-        </p>
-        <p class="body-text" id="late-2">
-            1899<br>
-            Monet began painting the waterlilies, first in vertical views with a Japanese bridge as a central feature, and later in the series of large-scale paintings that was to occupy him continuously for the next 20 years of his life. The artist had painted his first renditions in the 1890s but produced the majority of the works during the final two decades of his life.<br>
-            After losing both his second wife, Alice, and his eldest son, Jean, in 1911 and 1914 respectively, the artist sought consolation by embarking upon a great new work, a series of massive Water Lilies panels.
-        </p>
-        <div id="waterlilies-painting"></div>
+    <div class="late-years" id="waterlilies-painting">
+        <div data-bottom-top="transform:translateY(-60px);opacity: 0"
+             data-center="transform:translateY(0px); opacity: 1"
+             class="text-background">
+            <h4 data-bottom-top="transform:translateY(-60px);opacity: 0"
+                data-center="transform:translateY(0px); opacity: 1"
+                class="section-divider" id="divider-late">Late Years / 1890s Onwards</h4>
+            <p data-bottom-top="transform:translateY(-80px);opacity: 0"
+               data-center="transform:translateY(0px); opacity: 1"
+               class="body-text" id="late-1">
+                1893<br>
+                Monet purchased additional land with a water meadow. In 1893 he began a vast landscaping project which included lily ponds that would become the subjects of his best-known works.
+            </p>
+            <p data-bottom-top="transform:translateY(-115px);opacity: 0"
+               data--44p-bottom="transform:translateY(0px); opacity: 1"
+               class="body-text" id="late-2">
+                1899<br>
+                Monet began painting the waterlilies, first in vertical views with a Japanese bridge as a central feature, and later in the series of large-scale paintings that was to occupy him continuously for the next 20 years of his life. The artist had painted his first renditions in the 1890s but produced the majority of the works during the final two decades of his life.<br>
+                After losing both his second wife, Alice, and his eldest son, Jean, in 1911 and 1914 respectively, the artist sought consolation by embarking upon a great new work, a series of massive Water Lilies panels.
+            </p>
+        </div>
+
+
     </div>
 
     <div class="footer">

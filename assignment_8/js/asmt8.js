@@ -191,8 +191,9 @@ $(document).ready(function () {
     function log(e){try{console.log(e)}catch(e){}}
 
 
-    $(w).on('resize',function(){
+    $(w).on("resize",function(){
         winsize();
+
     });
 
     function isInView(x) {
@@ -212,7 +213,7 @@ $(document).ready(function () {
             dropRadius: 30 * Math.random(),
             perturbance: 0.06
         });
-        for (var j = 0; j <= 20; j++) {
+        for (var j = 0; j <= 15; j++) {
             $("#waterlilies-painting").ripples("drop", winHt * Math.random(), winWth * Math.random(), 24 * Math.random(), 0.01 + 0.03 * Math.random());
         }
     }
@@ -228,7 +229,7 @@ $(document).ready(function () {
 
                 // if dots container is in view, generate dots
                 if (dotsInView) {
-                    dotsInit();
+                    //dotsInit();
                 }
 
                 // if waterlilies are in view, generate ripples
