@@ -11,70 +11,141 @@ $(document).ready(function () {
 
     // hover to show info about other artists
 
-    var artistName;
+    var artistName = "";
     var artistContent = "";
     var artistLink = "";
 
+    // check if class name exists
     $("span").on("click", function(){
-        var spanPosTop = $(this).offset().top;
-        var spanPosLeft = $(this).offset().left;
 
-        artistName = $(this).text();
-        $("#artist-name").text(artistName);
-        //switch statement to determine which artist content and link to attach
-        switch (artistName) {
-            case "Gustave Courbet":
-                artistContent = "Jean Désiré Gustave Courbet was a French painter who led the Realism movement in 19th-century French painting.";
-                artistLink = "https://en.wikipedia.org/wiki/Gustave_Courbet";
-                break;
-            case "Edouard Manet":
-                artistContent = "Édouard Manet was one of the first 19th-century artists to paint modern life, and a pivotal figure in the transition from Realism to Impressionism.";
-                artistLink = "https://en.wikipedia.org/wiki/%C3%89douard_Manet";
-                break;
-            case "Charles Gleyre":
-                artistContent = "Marc Gabriel Charles Gleyre was a Swiss artist who was a resident in France from an early age. He taught a number of younger artists who became prominent.";
-                artistLink = "https://en.wikipedia.org/wiki/Charles_Gleyre";
-                break;
-            case "Pierre-Auguste Renoir":
-                artistContent = "As a celebrator of beauty and especially feminine sensuality, it has been said that \"Renoir is the final representative of a tradition which runs directly from Rubens to Watteau.\"";
-                artistLink = "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir";
-                break;
-            case "Frédéric Bazille":
-                artistContent = "Frédéric Bazille was a French Impressionist painter. Many of Bazille's major works are examples of figure painting in which he placed the subject figure within a landscape painted en plein air.";
-                artistLink = "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Bazille";
-                break;
-            case "Alfred Sisley":
-                artistContent = "Alfred Sisley was the most consistent of the Impressionists in his dedication to painting landscape en plein air; he found that Impressionism fulfilled his artistic needs.";
-                artistLink = "https://en.wikipedia.org/wiki/Alfred_Sisley";
-                break;
-            case "Sisley":
-                artistContent = "Alfred Sisley was the most consistent of the Impressionists in his dedication to painting landscape en plein air; he found that Impressionism fulfilled his artistic needs.";
-                artistLink = "https://en.wikipedia.org/wiki/Alfred_Sisley";
-                break;
-            case "Paul Cézanne":
-                artistContent = " was a French artist and Post-Impressionist painter whose work laid the foundations of the transition from the 19th-century conception of artistic endeavor to a new and radically different world of art in the 20th century.";
-                artistLink = "https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne";
-                break;
-            case "Camille Pissarro":
-                artistContent = "Camille Pissarro was a Danish-French Impressionist and Neo-Impressionist painter.";
-                artistLink = "https://en.wikipedia.org/wiki/Camille_Pissarro";
-                break;
-            case "Edgar Degas":
-                artistContent = "Edgar Degas is especially identified with the subject of dance; more than half of his works depict dancers. Regarded as one of the founders of Impressionism, he rejected the term, preferring to be called a realist.";
-                artistLink = "https://en.wikipedia.org/wiki/Edgar_Degas";
-                break;
+        // check if span has been clicked
+
+        // if (isClicked === false) {
+        //     artistName = $(this).text();
+        //     console.log(artistName);
+        //     $("#artist-name").text(artistName);
+        //     //switch statement to determine which artist content and link to attach
+        //     switch (artistName) {
+        //         case "Gustave Courbet":
+        //             artistContent = "Jean Désiré Gustave Courbet was a French painter who led the Realism movement in 19th-century French painting.";
+        //             artistLink = "https://en.wikipedia.org/wiki/Gustave_Courbet";
+        //             break;
+        //         case "Edouard Manet":
+        //             artistContent = "Édouard Manet was one of the first 19th-century artists to paint modern life, and a pivotal figure in the transition from Realism to Impressionism.";
+        //             artistLink = "https://en.wikipedia.org/wiki/%C3%89douard_Manet";
+        //             break;
+        //         case "Charles Gleyre":
+        //             artistContent = "Marc Gabriel Charles Gleyre was a Swiss artist who was a resident in France from an early age. He taught a number of younger artists who became prominent.";
+        //             artistLink = "https://en.wikipedia.org/wiki/Charles_Gleyre";
+        //             break;
+        //         case "Pierre-Auguste Renoir":
+        //             artistContent = "As a celebrator of beauty and especially feminine sensuality, it has been said that \"Renoir is the final representative of a tradition which runs directly from Rubens to Watteau.\"";
+        //             artistLink = "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir";
+        //             break;
+        //         case "Frédéric Bazille":
+        //             artistContent = "Frédéric Bazille was a French Impressionist painter. Many of Bazille's major works are examples of figure painting in which he placed the subject figure within a landscape painted en plein air.";
+        //             artistLink = "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Bazille";
+        //             break;
+        //         case "Alfred Sisley":
+        //             artistContent = "Alfred Sisley was the most consistent of the Impressionists in his dedication to painting landscape en plein air; he found that Impressionism fulfilled his artistic needs.";
+        //             artistLink = "https://en.wikipedia.org/wiki/Alfred_Sisley";
+        //             break;
+        //         case "Sisley":
+        //             artistContent = "Alfred Sisley was the most consistent of the Impressionists in his dedication to painting landscape en plein air; he found that Impressionism fulfilled his artistic needs.";
+        //             artistLink = "https://en.wikipedia.org/wiki/Alfred_Sisley";
+        //             break;
+        //         case "Paul Cézanne":
+        //             artistContent = " was a French artist and Post-Impressionist painter whose work laid the foundations of the transition from the 19th-century conception of artistic endeavor to a new and radically different world of art in the 20th century.";
+        //             artistLink = "https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne";
+        //             break;
+        //         case "Camille Pissarro":
+        //             artistContent = "Camille Pissarro was a Danish-French Impressionist and Neo-Impressionist painter.";
+        //             artistLink = "https://en.wikipedia.org/wiki/Camille_Pissarro";
+        //             break;
+        //         case "Edgar Degas":
+        //             artistContent = "Edgar Degas is especially identified with the subject of dance; more than half of his works depict dancers. Regarded as one of the founders of Impressionism, he rejected the term, preferring to be called a realist.";
+        //             artistLink = "https://en.wikipedia.org/wiki/Edgar_Degas";
+        //             break;
+        //     }
+        //     $("#artist-intro").text(artistContent);
+        //     $(".link").attr("href", artistLink);
+        //     var divHeight = $("#other-artists").height();
+        //     var divWidth = $("#other-artists").outerWidth();
+        //     this.append($("#other-artists")[0]);
+        //
+        // }
+        // $("#other-artists").css({
+        //     "top": -divHeight - 60,
+        //     "left": - 100,
+        //     "display": "block",
+        // });
+        if ($(this).children().length > 0) {
+            $("#artist-name").text("");
+            $("#artist-intro").text("");
+            $("#link").text("");
+            $("#link").attr("href", "");
         }
-        $("#artist-intro").text(artistContent);
-        $(".link").attr("href", artistLink);
-        var divHeight = $("#other-artists").height();
-        var divWidth = $("#other-artists").width();
 
-        $("#other-artists").css({
-            "top": spanPosTop - 15 - divHeight,
-            "left": spanPosLeft - divWidth / 2,
-            "display": "block"
-        });
+        console.log($(this).children()[0]);
 
+            artistName = $(this).text();
+            $("#artist-name").text(artistName);
+            //switch statement to determine which artist content and link to attach
+            switch (artistName) {
+                case "Gustave Courbet":
+                    artistContent = "Jean Désiré Gustave Courbet was a French painter who led the Realism movement in 19th-century French painting.";
+                    artistLink = "https://en.wikipedia.org/wiki/Gustave_Courbet";
+                    break;
+                case "Edouard Manet":
+                    artistContent = "Édouard Manet was one of the first 19th-century artists to paint modern life, and a pivotal figure in the transition from Realism to Impressionism.";
+                    artistLink = "https://en.wikipedia.org/wiki/%C3%89douard_Manet";
+                    break;
+                case "Charles Gleyre":
+                    artistContent = "Marc Gabriel Charles Gleyre was a Swiss artist who was a resident in France from an early age. He taught a number of younger artists who became prominent.";
+                    artistLink = "https://en.wikipedia.org/wiki/Charles_Gleyre";
+                    break;
+                case "Pierre-Auguste Renoir":
+                    artistContent = "As a celebrator of beauty and especially feminine sensuality, it has been said that \"Renoir is the final representative of a tradition which runs directly from Rubens to Watteau.\"";
+                    artistLink = "https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir";
+                    break;
+                case "Frédéric Bazille":
+                    artistContent = "Frédéric Bazille was a French Impressionist painter. Many of Bazille's major works are examples of figure painting in which he placed the subject figure within a landscape painted en plein air.";
+                    artistLink = "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Bazille";
+                    break;
+                case "Alfred Sisley":
+                    artistContent = "Alfred Sisley was the most consistent of the Impressionists in his dedication to painting landscape en plein air; he found that Impressionism fulfilled his artistic needs.";
+                    artistLink = "https://en.wikipedia.org/wiki/Alfred_Sisley";
+                    break;
+                case "Sisley":
+                    artistContent = "Alfred Sisley was the most consistent of the Impressionists in his dedication to painting landscape en plein air; he found that Impressionism fulfilled his artistic needs.";
+                    artistLink = "https://en.wikipedia.org/wiki/Alfred_Sisley";
+                    break;
+                case "Paul Cézanne":
+                    artistContent = " was a French artist and Post-Impressionist painter whose work laid the foundations of the transition from the 19th-century conception of artistic endeavor to a new and radically different world of art in the 20th century.";
+                    artistLink = "https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne";
+                    break;
+                case "Camille Pissarro":
+                    artistContent = "Camille Pissarro was a Danish-French Impressionist and Neo-Impressionist painter.";
+                    artistLink = "https://en.wikipedia.org/wiki/Camille_Pissarro";
+                    break;
+                case "Edgar Degas":
+                    artistContent = "Edgar Degas is especially identified with the subject of dance; more than half of his works depict dancers. Regarded as one of the founders of Impressionism, he rejected the term, preferring to be called a realist.";
+                    artistLink = "https://en.wikipedia.org/wiki/Edgar_Degas";
+                    break;
+            }
+            $("#artist-intro").text(artistContent);
+            $("#link").text("View More");
+            $("#link").attr("href", artistLink);
+            var divHeight = $("#other-artists").height();
+            this.append($("#other-artists")[0]);
+            console.log("successfully appended!");
+
+            // console.log($("#other-artists").parent());
+            $("#other-artists").css({
+                "top": -divHeight - 60,
+                "left": - 100,
+                "display": "block",
+            });
     });
 
     // manipulate position of 1874
