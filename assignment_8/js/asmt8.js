@@ -229,7 +229,7 @@ $(document).ready(function () {
 
                 // if dots container is in view, generate dots
                 if (dotsInView) {
-                    //dotsInit();
+                    dotsInit();
                 }
 
                 // if waterlilies are in view, generate ripples
@@ -248,9 +248,6 @@ $(document).ready(function () {
             radius: 400
         });
     });
-
-
-
 
 
 });

@@ -232,6 +232,24 @@ EARLY YEARS
     left: 50%;
     transform: translate(-50%, 0);
 }
+
+.water-animate:hover {
+    animation: float 2s ease-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        bottom: 0;
+        opacity: 1;
+        left: 50%;
+    }
+    45% {
+        bottom: 4px;
+        opacity: 0.46;
+        left: 50.1%;
+    }
+}
+
 /*
 ====================
 IMPRESSIONISM
@@ -512,3 +530,5 @@ OTHER ARTISTS INFO
     z-index: 10;
     display: none;
 }
+
+
