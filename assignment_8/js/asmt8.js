@@ -210,10 +210,10 @@ $(document).ready(function () {
     function ripplesInit() {
         $("#waterlilies-painting").ripples({
             resolution: 512,
-            dropRadius: 30 * Math.random(),
+            dropRadius: 25 * Math.random(),
             perturbance: 0.06
         });
-        for (var j = 0; j <= 15; j++) {
+        for (var j = 0; j <= 5; j++) {
             $("#waterlilies-painting").ripples("drop", winHt * Math.random(), winWth * Math.random(), 24 * Math.random(), 0.01 + 0.03 * Math.random());
         }
     }

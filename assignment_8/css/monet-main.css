@@ -19,6 +19,16 @@ body {
 
 }
 
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+    .hp-bg-img {
+        height: 100vh;
+        width: auto;
+        overflow: hidden;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
 .intro-text {
     width: 64%;
     display: block;
@@ -242,11 +252,19 @@ IMPRESSIONISM
     padding-top: 30vh;
 }
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .img-impressionism {
+        height: 100%;
+        width: auto;
+    }
+}
+
 #impression-1 {
     position: absolute;
     z-index: 2;
     width: 60%;
 }
+
 
 
 /*#impression-2 {*/
@@ -365,6 +383,16 @@ MORPHING ROUEN
 
 .text-series {
     width: 48%;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .morph {
+        width: 100%;
+        height: auto;
+    }
+    .text-series {
+        width: 60%;
+    }
 }
 
 /*
