@@ -1,8 +1,6 @@
 $(document).ready(function () {
     var sInit = skrollr.init();
 
-    // correspond animation with scroll position
-
     // image blur and fade
     var viewportHt = $(window).height();
 
@@ -114,13 +112,13 @@ $(document).ready(function () {
 
     // monet's paintings as particles
     // editing background image of dots
-    var dotsBgArr = ['url("source/giverny/bordighera.jpg")',
-        'url("source/giverny/Claude_Monet_-_Monet\'s_garden_at_Vétheuil_(1880).jpg")',
-        'url("source/giverny/sunlight-effect-under-the-poplars.Large.jpg")',
-        'url("source/giverny/young-girl-in-the-garden-at-giverny.jpg")',
-        'url("source/giverny/cliff-walk-at-pourville.jpg")',
-        'url("source/giverny/poplar-2.jpg")',
-        'url("source/giverny/grainstack.jpg")'
+    var dotsBgArr = ['url("assets/source/giverny/bordighera.jpg")',
+        'url("assets/source/giverny/Claude_Monet_-_Monet\'s_garden_at_Vétheuil_(1880).jpg")',
+        'url("assets/source/giverny/sunlight-effect-under-the-poplars.Large.jpg")',
+        'url("assets/source/giverny/young-girl-in-the-garden-at-giverny.jpg")',
+        'url("assets/source/giverny/cliff-walk-at-pourville.jpg")',
+        'url("assets/source/giverny/poplar-2.jpg")',
+        'url("assets/source/giverny/grainstack.jpg")'
     ];
 
     $(".text-impressionism").css("background-image", dotsBgArr[randomIdx]);
@@ -211,10 +209,10 @@ $(document).ready(function () {
         $("#waterlilies-painting").ripples({
             resolution: 512,
             dropRadius: 25 * Math.random(),
-            perturbance: 0.06
+            perturbance: 0.04
         });
         for (var j = 0; j <= 5; j++) {
-            $("#waterlilies-painting").ripples("drop", winHt * Math.random(), winWth * Math.random(), 24 * Math.random(), 0.01 + 0.03 * Math.random());
+            $("#waterlilies-painting").ripples("drop", winHt * Math.random(), winWth * Math.random(), 24 * Math.random(), 0.01 + 0.02 * Math.random());
         }
     }
 

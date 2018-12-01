@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Monet and Impressionism</title>
-    <link rel="stylesheet" type="text/css" href="css/monet-main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/monet-main.css">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display:400i" rel="stylesheet">
-    <script src="js/lib/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/lib/jquery.morphing.min.js" type="text/javascript"></script>
-    <script src="js/lib/visualizer.js" type="text/javascript"></script>
+    <script src="assets/js/lib/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="assets/js/lib/jquery.morphing.min.js" type="text/javascript"></script>
+    <script src="assets/js/lib/visualizer.js" type="text/javascript"></script>
     <!--<script src="js/lib/velocity.min.js"></script>-->
-    <script src="js/asmt8.js" type="text/javascript"></script>
+    <script src="assets/js/asmt8.js" type="text/javascript"></script>
 </head>
 <body>
     <!-- monet autograph -->
     <div class="vz-wrapper">
-        <audio id="myAudio" src="audio/Reverie-debussy.mp3" data-author="Debussy" data-title="Reverie"></audio>
+        <audio id="myAudio" src="assets/audio/Reverie-debussy.mp3" data-author="Debussy" data-title="Reverie"></audio>
     </div>
     <div class="vz-wrapper-canvas">
         <canvas id="myCanvas" width="200" height="100"></canvas>
@@ -34,7 +34,7 @@
 
     <div class="intro">
         <div class="intro-img">
-            <img class="hp-bg-img img-fade" src="source/pathway-in-monet-s-garden-at-giverny-1902-1024x984.jpg"/>
+            <img class="hp-bg-img img-fade" src="assets/source/pathway-in-monet-s-garden-at-giverny-1902-1024x984.jpg"/>
         </div>
         <h3 class="quotes" id="hp-quote">My wish is to stay always like this, living quietly in a corner of nature.</h3>
         <div class="intro-text">
@@ -65,9 +65,8 @@
 
     <!-- water wave animation -->
     <div class="img-early-years" id="test-bg">
-        <img class="water-layers" src="source/monet-test.png"/>
-        <img class="water-layers water-animate" src="source/monet-test-water.png" />
-
+        <img class="water-layers" src="assets/source/monet-test.png"/>
+        <img class="water-layers water-animate" src="assets/source/monet-test-water.png" />
     </div>
 
     <div class="text-early-years">
@@ -93,7 +92,7 @@
     <!---->
 
     <div class="text-impressionism">
-        <img class="img-impressionism" src="source/1024px-Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg"/>
+        <img class="img-impressionism" src="assets/source/1024px-Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg"/>
         <h4 data-bottom-top="transform:translateY(-60px);opacity: 0"
             data-center="transform:translateY(0px); opacity: 1"
             class="section-divider" id="divider-impressionism">Impressionism / 1870s</h4>
@@ -118,7 +117,8 @@
            data-center="transform:translateY(0px); opacity: 1"
            class="body-text" id="giverny-details">
             In September 1879, Camille, wife of Monet, died at the age of 32. After several difficult months following the death of Camille, Monet created some of his best paintings in the 19th century.<br>
-            During the early 1880s, Monet painted several groups of landscapes and seascapes in what he considered to be campaigns to document the French countryside. In 1883, Monet bought a house in Giverny, where he planted a large garden and where he painted.
+            During the early 1880s, Monet painted several groups of landscapes and seascapes in what he considered to be campaigns to document the French countryside. In 1883, Monet bought a house in Giverny, where he planted a large garden and where he painted.<br>
+            Below are from a sample of Monet's paintings then.
         </p>
     </div>
 
@@ -179,30 +179,30 @@
 
     </div>
 
-    <div class="footer">
+    <!--<div class="footer">-->
 
-        <p class="quotes-left">
+        <p class="quotes">
             Everyone discusses my art and pretends to understand, as if it were necessary to understand, when it is simply necessary to love.
             <br>
             <br>
             -- Claude Monet
         </p>
-        <div class="profile-reveal">
-            <div class="img-wrapper js-morphing" align="center">
-                <img id="monet-portrait" src="source/monet-self-portrait-small.jpg" />
-            </div>
-        </div>
-    </div>
+        <!--<div class="profile-reveal">-->
+            <!--<div class="img-wrapper js-morphing" align="center">-->
+                <!--<img id="monet-portrait" src="source/monet-self-portrait-small.jpg" />-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
     <!-- initializing -->
-    <script type="text/javascript" src="js/lib/skrollr.min.js"></script>
+    <script type="text/javascript" src="assets/js/lib/skrollr.min.js"></script>
     <script type="text/javascript">
         var sInit = skrollr.init({
             forceHeight: false
         });
     </script>
-    <script type="text/javascript" src="js/lib/jquery.ripples-min.js">
+    <script type="text/javascript" src="assets/js/lib/jquery.ripples-min.js">
     </script>
-    <script src="js/lib/jquery.morphing.min.js"></script>
+    <!--<script src="js/lib/jquery.morphing.min.js"></script>-->
 
 
 </body>
