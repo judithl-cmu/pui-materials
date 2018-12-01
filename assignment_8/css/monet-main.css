@@ -8,6 +8,17 @@ body {
     margin-top: -100px;
 }
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .hp-bg-img {
+        height: 100vh;
+        width: auto;
+        overflow: hidden;
+        margin-top: 0;
+        text-align: center;
+    }
+
+}
+
 .intro-text {
     width: 64%;
     display: block;
@@ -138,7 +149,7 @@ h1, h2, h3, h4, p {
 #hp-quote {
     position: absolute;
     z-index: 2;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -207,8 +218,6 @@ EARLY YEARS
 
 .water-layers {
     height: 100vh;
-    display: block;
-    margin: auto;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
